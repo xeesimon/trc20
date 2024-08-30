@@ -1,0 +1,20 @@
+{
+  "name": "xeemosion/xeepush",
+  "description": "A telegram, weichat and other push message interfaces",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Xeemosion\\Xeepush\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "xeemosion"
+    }
+  ],
+  "require": {
+    "php": "^7.3||^8.0",
+    "guzzlehttp/guzzle": "^7.8"
+  }
+}
