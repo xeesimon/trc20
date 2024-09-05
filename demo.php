@@ -11,7 +11,7 @@ $data = [
     'pay_type' => 'usdt',
     'notify_url' => 'https://tool.adpay.top/prod/pay/tron/notify',
     'redirect_url' => 'https://www.baidu.com',
-    'app_id' => '888810001',
+    'app_id' => '1bx411c7us',
     'user_id' => '100012222222'
 ];
 $res = CreateUsdtOrder::instance($signKey)->post($data);

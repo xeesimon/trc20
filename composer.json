@@ -1,7 +1,7 @@
 {
   "name": "xeemosion/xeepush",
   "description": "A telegram, weichat and other push message interfaces",
-  "type": "project",
+  "type": "library",
   "license": "MIT",
   "autoload": {
     "psr-4": {

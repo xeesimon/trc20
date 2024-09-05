@@ -1,6 +1,6 @@
 <?php
 
-namespace Xeemosion\xeepush;
+namespace Xeemosion\Xeepush;
 
 use Xeemosion\Xeepush\Guzzle;
 
