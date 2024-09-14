@@ -9,8 +9,8 @@ class Request
     protected $client;
     protected $method;
     protected $args;
-
-    protected $endpoint = "https://tool.adpay.top/prod/push/";
+    //https://tool.adpay.top/prod/push/
+    protected $endpoint = "https://webman.servbay.host/push/";
 
 
     public function __construct(XeeClient $client, $method)
@@ -21,7 +21,9 @@ class Request
 
     public function withArgs($args)
     {
-        $this->args = $args;
+        if (is_array($args) && count($args) == 1) {
+            $this->args = $args[0];
+        }
         return $this;
     }
 
@@ -37,13 +39,15 @@ class Request
 
     public function request()
     {
+
         if ($this->method == 'createOrder') {
-            $this->args['sign'] = static::getSign($this->args, $this->client->appCode);
+            // $this->args['sign'] = static::getSign($this->args, $this->client->appCode);
         }
         $options = [
             'json' => $this->args,
             'headers' => [
-                'AppCode' => $this->client->appCode,
+                'xeeAppCode' => $this->client->appCode,
+                'xeeAppAgent'    => "XeeClient",
             ],
         ];
 
@@ -66,7 +70,6 @@ class Request
         foreach ($signData as $key => $value) {
             $str .= $key . '=' . $value . '&';
         }
-        $str = $str . $key;
         $str = $str . "&key=" . $signKey;
         //echo $str;
         return strtolower(md5($str));
