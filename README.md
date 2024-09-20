@@ -66,7 +66,7 @@ print_r($res['data']);
 
 
 
-### usdt支付回调
+### usdt支付回调createOrder
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
@@ -87,12 +87,87 @@ if ($res['code'] != 200) {
 } 
 //推送成功后返回的数据
 print_r($res['data']);
-
-
 ```
 
 
+### 推送到邮件email
 
+
+```php
+use Xeemosion\Xeepush\XeeClient;
+$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+
+$res = $client->email()
+    ->set_title("标题")
+    ->set_push_data('推送的内容是hello world')
+    ->request();
+if ($res['code'] != 200) {
+    //返回错误信息
+    return $res['message'];
+} 
+//推送成功后返回的数据
+print_r($res['data']);
+```
+
+
+### 推送到钉钉dingTalk
+
+
+```php
+use Xeemosion\Xeepush\XeeClient;
+$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+
+$res = $client->dingTalk()
+    ->set_title("标题")
+    ->set_push_data('推送的内容是hello world')
+    ->request();
+if ($res['code'] != 200) {
+    //返回错误信息
+    return $res['message'];
+} 
+//推送成功后返回的数据
+print_r($res['data']);
+```
+
+
+### 推送到企业微信wechatCom
+
+
+```php
+use Xeemosion\Xeepush\XeeClient;
+$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+
+$res = $client->wechatCom()
+    ->set_title("标题")
+    ->set_push_data('推送的内容是hello world')
+    ->request();
+if ($res['code'] != 200) {
+    //返回错误信息
+    return $res['message'];
+} 
+//推送成功后返回的数据
+print_r($res['data']);
+```
+
+### 推送到Telegram
+
+
+```php
+use Xeemosion\Xeepush\XeeClient;
+$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+
+$res = $client->Telegram()
+    ->set_title("推送到Telegram")
+    ->set_push_data('推送的内容是hello world')
+    ->request();
+if ($res['code'] != 200) {
+    //返回错误信息
+    return $res['message'];
+} 
+//推送成功后返回的数据
+print_r($res['data']);
+
+```
 
 | 白色模式                                                          | 黑色模式                                                          |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |

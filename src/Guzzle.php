@@ -49,6 +49,7 @@ class Guzzle
     private static function buildOptions(string $method, array $data = [], array $options = []): array
     {
         if ($method === 'POST') {
+
             $options['form_params'] = $data;
             $options['json'] = $data;
         } else {
