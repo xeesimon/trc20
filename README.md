@@ -15,12 +15,14 @@
 - 支持 usdt 支付回调
 
 
+> $client = new XeeClient("你的 xeeAppCode"); xeeAppCode 请在平台注册获取
+
 ### 调用方式一
 
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
-$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+$client = new XeeClient("你的 appcode");
 
 $data = [
     'title' => "推送到Telegram", ,
@@ -49,7 +51,7 @@ print_r($res['data']);
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
-$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+$client = new XeeClient("你的 appcode");
 
 $res = $client->Telegram()
     ->set_title("推送到Telegram")
@@ -70,7 +72,7 @@ print_r($res['data']);
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
-$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+$client = new XeeClient("你的 appcode");
 
 $res = $client->createOrder()
     ->set_order_id("20140520" . time())
@@ -95,7 +97,7 @@ print_r($res['data']);
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
-$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+$client = new XeeClient("你的 appcode");
 
 $res = $client->email()
     ->set_title("标题")
@@ -115,7 +117,7 @@ print_r($res['data']);
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
-$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+$client = new XeeClient("你的 appcode");
 
 $res = $client->dingTalk()
     ->set_title("标题")
@@ -135,7 +137,7 @@ print_r($res['data']);
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
-$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+$client = new XeeClient("你的 appcode");
 
 $res = $client->wechatCom()
     ->set_title("标题")
@@ -154,7 +156,7 @@ print_r($res['data']);
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
-$client = new XeeClient("b4d96cff33fa3d6fd39a22f955b266ee");
+$client = new XeeClient("你的 appcode");
 
 $res = $client->Telegram()
     ->set_title("推送到Telegram")
