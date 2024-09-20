@@ -4,6 +4,10 @@
 
 
 
+## [usdt 支付 sdk 点击这里](#trc-支付功能介绍)
+
+
+
 
 ## 消息推送平台您只需要调用一次接口，即可将消息推送至这些应用
 - 支持 微信
@@ -17,8 +21,14 @@
 - 支持 Discord 
 - 支持 usdt 支付回调
 
+#### 使用步骤
+> - 1.在平台注册,获取xeeAppCode
+> - 2.安装 composer require xeemosion/xeepush 
+> - 3.调用接口
 
-> $client = new XeeClient("你的 xeeAppCode"); xeeAppCode 请在平台注册获取
+
+#### 安装
+> composer require xeemosion/xeepush 
 
 ### 调用方式一
 
@@ -167,6 +177,7 @@ print_r($res['data']);
 
 
 ### 后端调用
+> 安装 composer require xeemosion/xeepush 
 
 ```php
 use Xeemosion\Xeepush\XeeClient;
