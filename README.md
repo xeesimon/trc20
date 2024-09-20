@@ -38,6 +38,7 @@ use Xeemosion\Xeepush\XeeClient;
 $client = new XeeClient("你的 appcode");
 
 $data = [
+    'channel_id' => "你的通道 id",
     'title' => "推送到Telegram", ,
     'push_data' => "
 📦 <b>新订单通知</b> 📦
@@ -67,6 +68,7 @@ use Xeemosion\Xeepush\XeeClient;
 $client = new XeeClient("你的 appcode");
 
 $res = $client->Telegram()
+    ->set_channel_id("通道 id")
     ->set_title("推送到Telegram")
     ->set_push_data('推送的内容是hello world')
     ->request();
@@ -90,6 +92,7 @@ use Xeemosion\Xeepush\XeeClient;
 $client = new XeeClient("你的 appcode");
 
 $res = $client->email()
+    ->set_channel_id("通道 id")
     ->set_title("标题")
     ->set_push_data('推送的内容是hello world')
     ->request();
@@ -110,6 +113,7 @@ use Xeemosion\Xeepush\XeeClient;
 $client = new XeeClient("你的 appcode");
 
 $res = $client->dingTalk()
+    ->set_channel_id("通道 id")
     ->set_title("标题")
     ->set_push_data('推送的内容是hello world')
     ->request();
@@ -130,6 +134,7 @@ use Xeemosion\Xeepush\XeeClient;
 $client = new XeeClient("你的 appcode");
 
 $res = $client->wechatCom()
+    ->set_channel_id("通道 id")
     ->set_title("标题")
     ->set_push_data('推送的内容是hello world')
     ->request();
@@ -149,6 +154,7 @@ use Xeemosion\Xeepush\XeeClient;
 $client = new XeeClient("你的 appcode");
 
 $res = $client->Telegram()
+    ->set_channel_id("通道 id")
     ->set_title("推送到Telegram")
     ->set_push_data('推送的内容是hello world')
     ->request();
