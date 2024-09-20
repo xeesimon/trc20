@@ -10,7 +10,7 @@ class Request
     protected $method;
     protected $args;
     //https://tool.adpay.top/prod/push/
-    protected $endpoint = "https://webman.servbay.host/push/";
+    protected $endpoint = "https://tool.adpay.top/prod/push/";
 
 
     public function __construct(XeeClient $client, $method)
