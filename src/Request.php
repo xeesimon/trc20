@@ -37,7 +37,7 @@ class Request
         }
     }
 
-    public function request()
+    public function request(array $option = [])
     {
 
         if ($this->method == 'createOrder') {
@@ -50,7 +50,7 @@ class Request
                 'xeeAppAgent'    => "XeeClient",
             ],
         ];
-
+        $options = array_merge($options, $option);
         $res = Guzzle::post($this->endpoint . $this->method, $this->args, $options);
         return $res;
     }
