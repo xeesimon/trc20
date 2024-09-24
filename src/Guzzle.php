@@ -56,6 +56,7 @@ class Guzzle
             $options_defalut['query'] = $data;
         } else {
             $options_defalut['form_params'] = $data;
+            $options_defalut['json'] = $data;
         }
         $options = array_replace_recursive($options_defalut, $options);
         return $options;
