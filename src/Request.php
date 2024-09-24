@@ -39,10 +39,6 @@ class Request
 
     public function request(array $option = [])
     {
-
-        if ($this->method == 'createOrder') {
-            // $this->args['sign'] = static::getSign($this->args, $this->client->appCode);
-        }
         $options = [
             'json' => $this->args,
             'headers' => [
@@ -50,28 +46,8 @@ class Request
                 'xeeAppAgent'    => "XeeClient",
             ],
         ];
-        $options = array_merge($options, $option);
+        $options = array_replace_recursive($options, $option);
         $res = Guzzle::post($this->endpoint . $this->method, $this->args, $options);
         return $res;
-    }
-
-    /**
-     * 下单计算签名
-     *
-     * @return string
-     */
-
-    public static function getSign(array $data, string $signKey)
-    {
-        $signFields = ['order_id', 'amount', 'app_id', 'user_id', 'pay_type', 'notify_url'];
-        $signData = array_intersect_key($data, array_flip($signFields));
-        ksort($signData);
-        $str = '';
-        foreach ($signData as $key => $value) {
-            $str .= $key . '=' . $value . '&';
-        }
-        $str = $str . "&key=" . $signKey;
-        //echo $str;
-        return strtolower(md5($str));
     }
 }
