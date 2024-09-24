@@ -24,7 +24,9 @@ class Guzzle
     {
         $client = new Client();
         //设置请求超时时间为 3 分钟
-        $options['timeout'] = 60;
+        if (!isset($options['timeout'])) {
+            $options['timeout'] = 60;
+        }
         try {
             $response = $client->request($method, $url, $options);
             $val = json_decode((string) $response->getBody(), true);
@@ -48,14 +50,14 @@ class Guzzle
      */
     private static function buildOptions(string $method, array $data = [], array $options = []): array
     {
-        if ($method === 'POST') {
 
-            $options['form_params'] = $data;
-            $options['json'] = $data;
+        $options_defalut['headers']['Content-Type'] = 'application/json';
+        if ($method === 'GET') {
+            $options_defalut['query'] = $data;
         } else {
-            $options['query'] = $data;
+            $options_defalut['form_params'] = $data;
         }
-
+        $options = array_replace_recursive($options_defalut, $options);
         return $options;
     }
 
