@@ -9,8 +9,8 @@ class Request
     protected $client;
     protected $method;
     protected $args;
-    //https://tool.adpay.top/prod/push/
-    protected $endpoint = "https://tool.adpay.top/prod/push/";
+    //https://api.adpay.top/prod/push/
+    protected $endpoint = "https://api.adpay.top/prod/push/";
 
 
     public function __construct(XeeClient $client, $method)

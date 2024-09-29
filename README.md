@@ -1,6 +1,6 @@
 ## 使用须知
-- 文档地址 [www.adpay.top](https://www.adpay.top/)
-- 去平台注册 app_id  [https://tool.adpay.top/](https://tool.adpay.top/)
+- 文档地址 [doc.adpay.top](https://doc.adpay.top/)
+- 去平台注册 app_id  [https://home.adpay.top/](https://home.adpay.top/)
 
 
 
@@ -201,7 +201,7 @@ $res = $client->createOrder()
     ->set_order_id("20140520" . time())
     ->set_amount('10.00')
     ->set_pay_type('usdt')
-    ->set_notify_url('https://tool.adpay.top/prod/pay/tron/notify')
+    ->set_notify_url('https://api.adpay.top/prod/pay/tron/notify')
     ->set_redirect_url('https://www.baidu.com')
     ->set_app_id('1bx411c7us')
     ->set_user_id('100012222222')
@@ -219,14 +219,14 @@ print_r($res['data']);
 
 ```javascript
 <div id="usdt_html"></div>
-<script src="https://tool.adpay.top/prod/js"></script>
+<script src="https://api.adpay.top/prod/js"></script>
 <script>
     $(document).ready(function() {
         usdt.post({
             order_id: "201405201724111872", //订单号
             amount: "10.00", //金额保留 2 位小数
             pay_type: "usdt", //支付方式,usdt/trx
-            notify_url: "https://tool.adpay.top/prod/pay/tron/notify", //回调地址
+            notify_url: "https://api.adpay.top/prod/pay/tron/notify", //回调地址
             redirect_url: "https://www.baidu.com", //支付成功后返回的地址
             app_id: "888810001", //填写网站生成的app_id
             user_id: "100012222222", //支付客户的 user_id
