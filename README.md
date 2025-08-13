@@ -1,6 +1,6 @@
 ## 使用须知
-- 文档地址 [doc.adpay.top](https://doc.adpay.top/)
-- 去平台注册 app_id  [https://home.adpay.top/](https://home.adpay.top/)
+- 文档地址 [doc.ipv6e.com](https://doc.ipv6e.com/)
+- 去平台注册 app_id  [https://home.ipv6e.com/](https://home.ipv6e.com/)
 
 
 
@@ -170,7 +170,7 @@ print_r($res['data']);
 
 | ---                                                               | --                                                                |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| ![图 0](https://imgs3.adpay.top/doc/2024-09-20-14-50-2002443.png) | ![图 1](https://imgs3.adpay.top/doc/2024-09-20-14-51-2580584.png) |
+| ![图 0](https://imgs3.ipv6e.com/doc/2024-09-20-14-50-2002443.png) | ![图 1](https://imgs3.ipv6e.com/doc/2024-09-20-14-51-2580584.png) |
 
 
 
@@ -248,8 +248,8 @@ print_r($res['data']);
 
 | 白色模式                                                          | 黑色模式                                                          |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| ![图 0](https://imgs3.adpay.top/doc/2024-08-28-11-40-4738963.png) | ![图 1](https://imgs3.adpay.top/doc/2024-08-28-11-44-0840877.png) |
-| ![图 2](https://imgs3.adpay.top/doc/2024-08-28-11-48-2905514.png) | ![图 3](https://imgs3.adpay.top/doc/2024-08-28-11-49-0977992.png) |
+| ![图 0](https://imgs3.ipv6e.com/doc/2024-08-28-11-40-4738963.png) | ![图 1](https://imgs3.ipv6e.com/doc/2024-08-28-11-44-0840877.png) |
+| ![图 2](https://imgs3.ipv6e.com/doc/2024-08-28-11-48-2905514.png) | ![图 3](https://imgs3.ipv6e.com/doc/2024-08-28-11-49-0977992.png) |
 
 
 
